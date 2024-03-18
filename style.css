@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #37617a;
+  --primary-color-dark: #0d1a20;
+  --secondary-color: #fb923c;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html , body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(to right bottom, #7aa7ba, #0d1a20);
+  overflow: hidden;
+}
+
+.container{
+    min-height: 100vh;
+    max-width: 1300px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
+}
+
+ul li {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+ul li:hover{
+    color: var(--secondary-color);
+}
+
+ul .shopping__card{
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-content: center;
+    border-radius: 100%;
+    font-size: 1.2rem;
+    color: var(--primary-color-dark);
+    background-color: var(--white);
+}
+
+ul li span {
+    font-size: 1.2rem;
+}
+
+.content{
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.image{
+    width: 100%;
+    animation: shoe-animation 3s infinite;
+}
+
+.image img{
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    margin: auto;
+    transform:rotate(-20deg);
+}
+
+@keyframes shoe-animation {
+    0%{
+        transform: translateY(0px);
+    }
+    70%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.detailes{
+    position: absolute;
+    top: 7rem;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.detailes h1{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.detailes p{
+    text-align: right;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.detailes p:hover{
+    color: var(--secondary-color);
+}
+
+.featured{
+    position: absolute;
+    transform: rotate(-90deg);
+}
+
+.featured h4{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: var(--white);
+}
+
+.featured p{
+    color: var(--white);
+}
+
+.contact{
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transform: rotate(-90deg);
+}
+
+.contact span{
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-content: center;
+    border-radius: 100%;
+    font-size: 1.2rem;
+    color: var(--primary-color-dark);
+    background-color: var(--white);
+    transform: rotate(90deg);
+}
+
+footer{
+    padding:1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socials{
+    display: felx;
+    align-items: center;
+    gap: 2rem;
+}
+
+.socials span{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.socials span:hover{
+    color: var(--secondary-color);
+}
+
+.slides{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--white);
+}
+
+@media (max-width: 640px) {
+    ul li:not(.shopping__card){
+        display: none;
+    }
+
+    .detailes{
+        top: 1rem;
+    }
+    .featured{
+        left: -5rem;
+    }
+    .contact{
+        right: -4rem;
+    }
+}
